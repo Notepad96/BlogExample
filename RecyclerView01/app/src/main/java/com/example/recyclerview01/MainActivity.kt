@@ -21,5 +21,14 @@ class MainActivity : AppCompatActivity() {
             layoutManager = manager01
         }
 
+
+        var list = arrayListOf("Test 1", "Test 2", "Test 3", "Test 4")
+        var manager02 = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        var adapter02 = ListAdapterHorizontal(list)
+
+        var RecyclerView02 = recyclerHorizon.apply {
+            adapter = adapter02
+            layoutManager = manager02
+        }
     }
 }
