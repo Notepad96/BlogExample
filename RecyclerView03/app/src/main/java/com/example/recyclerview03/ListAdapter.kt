@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
+class ListAdapter(var list: ArrayList<String>): RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
 
     class ListViewHolder(val layout: View): RecyclerView.ViewHolder(layout)
 
@@ -17,11 +17,11 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        TODO("Not yet implemented")
+
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return list.size + 3
     }
 
     override fun getItemViewType(position: Int): Int {

@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/10597/BlogExample/RecyclerView03/app/src/main/res/layout/activity_main.xml" value="0.2390625" />
+        <entry key="..\:/Users/10597/BlogExample/RecyclerView03/app/src/main/res/layout/list_footer.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/10597/BlogExample/RecyclerView03/app/src/main/res/layout/list_header.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/10597/BlogExample/RecyclerView03/app/src/main/res/layout/list_item.xml" value="0.25364583333333335" />
       </map>
     </option>
