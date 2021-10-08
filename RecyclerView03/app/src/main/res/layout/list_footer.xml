@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:background="#ededed"
+    android:id="@+id/layoutListFooter"
     android:orientation="horizontal">
 
     <ImageView
@@ -12,7 +13,6 @@
         android:src="@drawable/ic_baseline_add_circle_24"/>
 
     <TextView
-        android:id="@+id/textListContent"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginLeft="5dp"
