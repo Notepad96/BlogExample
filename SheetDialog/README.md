@@ -1,17 +1,6 @@
-# Topic
+# Topic : BottomSheetDialog
 
-<pre>
-
-1. Button Border : StrokeWidth 사용
-
-2. TextView Border : Drawalbe 파일 생성. Border 전체 또는 일부 방향만 적용 가능
-
-3. 구분선 만들기
-
-4. Layout Border : Drawalbe 파일 생성. Border 전체 또는 일부 방향만 적용 가능
-
-
-</pre>
+### https://notepad96.tistory.com/entry/Android-Kotlin-BottomSheetDialog-%EC%95%84%EB%9E%98-%ED%8C%9D%EC%97%85-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83
 
 <br><br>
 
