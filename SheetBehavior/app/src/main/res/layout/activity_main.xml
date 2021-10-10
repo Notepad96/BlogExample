@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutMain"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnOpenSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sheet Open" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:maxHeight="100dp"
+        app:behavior_peekHeight="80dp"
+        app:behavior_hideable="true">
+        <include
+            android:id="@+id/layoutDialog"
+            layout="@layout/sheet_main"/>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
