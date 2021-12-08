@@ -11,19 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Button" />
+        android:layout_margin="30dp"
+        android:text="Default Button" />
 
     <Button
+        style="@style/OutLineButton"
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Button2" />
+        android:layout_margin="30dp"
+        android:text="OutLine Button" />
 
     <Button
+        style="@style/TextButton"
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Button3" />
+        android:layout_margin="30dp"
+        android:text="Text Button" />
 </LinearLayout>
