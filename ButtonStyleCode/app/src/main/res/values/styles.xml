@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Button.Border" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeWidth">5dp</item>
+        <item name="strokeColor">#555555</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>
