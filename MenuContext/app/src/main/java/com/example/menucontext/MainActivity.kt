@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         vTextMenuItem.text = item.toString()
+        var text = when(item.itemId) {
+            R.id.item1 -> "Item1 Click"
+            R.id.item2 -> "Item2 Click"
+            R.id.item21 -> "Item21 Click"
+            R.id.item22 -> "Item22 Click"
+            else -> "Item3 Click"
+        }
+        Toast.makeText(applicationContext, text, Toast.LENGTH_LONG).show()
         return super.onContextItemSelected(item)
     }
 }
