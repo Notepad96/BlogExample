@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="속 성" android:id="@+id/mItem01"/>
+    <item android:title="수 정" android:id="@+id/mItem02" />
+    <item android:title="삭 제" android:id="@+id/mItem03" />
+</menu>

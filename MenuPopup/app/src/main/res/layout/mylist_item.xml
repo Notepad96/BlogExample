@@ -3,28 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/vLayoutMyListItem"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/vTextMyListTitle"
+        android:padding="5dp"
         android:text="Test Title"
         android:textSize="22sp"
         android:textStyle="bold" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#777"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/vTextMyListContent"
+        android:padding="5dp"
         android:text="Test Contents"
-        android:textSize="18sp"
-        />
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#777"/>
 
 </LinearLayout>
