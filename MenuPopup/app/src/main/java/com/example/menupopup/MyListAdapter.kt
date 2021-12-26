@@ -1,7 +1,6 @@
 package com.example.menupopup
 
 import android.view.LayoutInflater
-import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
@@ -26,8 +25,8 @@ class MyListAdapter: RecyclerView.Adapter<MyListAdapter.MyView>() {
         holder.layout.vLayoutMyListItem.setOnClickListener {
             val popup = PopupMenu(holder.layout.context, it)
             popup.menuInflater.inflate(R.menu.list_item_popup, popup.menu)
-            popup.setOnMenuItemClickListener {
-                var text = when(it.itemId) {
+            popup.setOnMenuItemClickListener { item ->
+                var text = when(item.itemId) {
                     R.id.mItem01 -> "${position+1}번 째 속성 Click"
                     R.id.mItem02 -> "${position+1}번 째 수정 Click"
                     else -> "${position+1}번 째 삭제 Click"
