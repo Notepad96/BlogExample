@@ -26,6 +26,8 @@
         app:itemRippleColor="@color/black"
         app:itemTextColor="@color/nav_bottom_color"
         app:itemIconTint="@color/nav_bottom_color"
+        app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.Menu"
+        app:itemTextAppearanceInactive="@style/MyTextSize"
 
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
