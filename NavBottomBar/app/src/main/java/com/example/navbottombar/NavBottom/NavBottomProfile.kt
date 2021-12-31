@@ -18,7 +18,7 @@ class NavBottomProfile : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_nav_bottom_home, container, false)
+        return inflater.inflate(R.layout.fragment_nav_bottom_profile, container, false)
     }
 
 }
