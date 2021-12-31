@@ -1,12 +1,13 @@
-package com.example.navbottombar
+package com.example.navbottombar.NavBottom
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.navbottombar.R
 
-class NavBottomHome : Fragment() {
+class NavBottomProfile : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
