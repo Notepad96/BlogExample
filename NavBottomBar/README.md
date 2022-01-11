@@ -1,7 +1,7 @@
-# Topic : Button Click Event
+# Topic : Navigation Bottom Bar
 
 
-### https://notepad96.tistory.com/entry/Android-Kotlin-Click-Event
+### 
 
 
 <br><br>

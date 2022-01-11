@@ -1,7 +1,7 @@
 # Topic : TitleBar Option Menu
 
 
-### https://notepad96.tistory.com/entry/Android-2
+### https://notepad96.tistory.com/entry/Android-Kotlin-Option-Menu
 
 
 <br><br>
