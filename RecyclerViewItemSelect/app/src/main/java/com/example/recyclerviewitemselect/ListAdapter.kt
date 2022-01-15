@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.ListView>() {
-    var beforePos = -1
     var selectPos = -1
 
     inner class ListView(val layout: View): RecyclerView.ViewHolder(layout)
@@ -26,7 +25,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ListView>() {
 
 
         holder.layout.list_item_layout.setOnClickListener {
-            beforePos = selectPos
+            var beforePos = selectPos
             selectPos = position
 
             notifyItemChanged(beforePos)

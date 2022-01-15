@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
+    <LinearLayout
         android:id="@+id/layout_nav_bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_above="@id/nav_main_bottom"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -24,7 +25,9 @@
         app:itemRippleColor="@color/black"
         app:itemTextColor="@color/nav_bottom_color"
         app:itemIconTint="@color/nav_bottom_color"
+
         app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.Menu"
-        app:itemTextAppearanceInactive="@style/MyTextSize" />
+        app:itemTextAppearanceInactive="@style/MyTextSize"
+        />
 
 </RelativeLayout>

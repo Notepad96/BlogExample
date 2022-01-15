@@ -15,6 +15,6 @@
     </style>
 
     <style name="MyTextSize" parent="TextAppearance.AppCompat">
-        <item name="android:textSize">@dimen/menu_text_size</item>
+        <item name="android:textSize">12sp</item>
     </style>
 </resources>

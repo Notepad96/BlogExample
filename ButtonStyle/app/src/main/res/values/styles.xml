@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="DefaultButton" parent="TextAppearance.MaterialComponents.Button">
+    <style name="DefaultButton" parent="Widget.MaterialComponents.Button">
         <item name="strokeColor">#008800</item>
         <item name="strokeWidth">4dp</item>
         <item name="android:textColor">@color/black</item>
