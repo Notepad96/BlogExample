@@ -1,11 +1,16 @@
-# Topic : Button Click Event
+# Topic : RecyclerView Item Scroll (PagerSnapHelper)
 
 
-### https://notepad96.tistory.com/entry/Android-Kotlin-Click-Event
+### https://notepad96.tistory.com/entry/Android-Kotlin-SnapHelper
 
 
 <br><br>
 
-# Preview
+# Preview (Before)
 
-![preview](preview.gif)
+![preview](preview1.gif)
+
+
+# Preview (After)
+
+![preview](preview2.gif)
