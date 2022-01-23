@@ -3,7 +3,7 @@ package com.example.calendarcustom
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_item_month.view.*
 import java.util.*
@@ -20,8 +20,8 @@ class AdapterMonth: RecyclerView.Adapter<AdapterMonth.MonthView>() {
     }
 
     override fun onBindViewHolder(holder: MonthView, position: Int) {
-        val dayListManager = LinearLayoutManager(holder.layout.context)
-        val dayListAdapter = AdapterMonth()
+        val dayListManager = GridLayoutManager(holder.layout.context, 7)
+        val dayListAdapter = AdapterDay()
 
         holder.layout.item_month_day_list.apply {
             layoutManager = dayListManager
