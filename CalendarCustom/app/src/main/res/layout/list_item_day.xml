@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_gravity="right"
+    android:id="@+id/item_day_layout"
+    android:layout_width="match_parent"
+    android:gravity="right"
     android:layout_height="60dp"
     android:layout_marginTop="5dp"
-    android:layout_marginLeft="5dp">
+    android:layout_marginRight="5dp">
 
     <TextView
         android:id="@+id/item_day_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:layout_gravity="right"
         android:text="9"/>
 
 </LinearLayout>

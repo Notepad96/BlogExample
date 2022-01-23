@@ -13,13 +13,13 @@ class MainActivity : AppCompatActivity() {
 
         val monthListManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         val monthListAdapter = AdapterMonth()
-        val snap = PagerSnapHelper()
-        snap.attachToRecyclerView(calendar_custom)
 
         calendar_custom.apply {
             layoutManager = monthListManager
             adapter = monthListAdapter
             scrollToPosition(Int.MAX_VALUE/2)
         }
+        val snap = PagerSnapHelper()
+        snap.attachToRecyclerView(calendar_custom)
     }
 }
