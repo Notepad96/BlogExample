@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     tools:context=".MainActivity">
 
         <com.google.android.material.chip.ChipGroup
@@ -19,6 +19,7 @@
                 android:id="@+id/chip01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:chipMinHeight="40dp"
                 app:chipStartPadding="20dp"
                 app:chipEndPadding="20dp"
                 app:chipBackgroundColor="@color/chip_check"
