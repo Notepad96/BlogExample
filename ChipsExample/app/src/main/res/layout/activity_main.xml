@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
         <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
             app:chipSpacingHorizontal="30dp"
             app:singleSelection="true"
             android:layout_width="wrap_content"
@@ -23,7 +24,7 @@
                 app:chipBackgroundColor="@color/chip_check"
                 android:textSize="18sp"
                 android:textColor="@color/white"
-                android:text="Test 1"/>
+                android:text="Chip 1"/>
 
             <com.google.android.material.chip.Chip
                 style="@style/Widget.MaterialComponents.Chip.Choice"
@@ -35,7 +36,7 @@
                 app:chipBackgroundColor="@color/chip_check"
                 android:textSize="18sp"
                 android:textColor="@color/white"
-                android:text="Test 2"/>
+                android:text="Chip 2"/>
 
             <com.google.android.material.chip.Chip
                 style="@style/Widget.MaterialComponents.Chip.Choice"
@@ -47,7 +48,7 @@
                 app:chipBackgroundColor="@color/chip_check"
                 android:textSize="18sp"
                 android:textColor="@color/white"
-                android:text="Test 3"/>
+                android:text="Chip 3"/>
 
         </com.google.android.material.chip.ChipGroup>
 
