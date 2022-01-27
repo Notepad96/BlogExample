@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+        <com.google.android.material.chip.ChipGroup
+            app:chipSpacingHorizontal="30dp"
+            app:singleSelection="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:id="@+id/chip01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipStartPadding="20dp"
+                app:chipEndPadding="20dp"
+                app:chipBackgroundColor="@color/chip_check"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:text="Test 1"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:id="@+id/chip02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipStartPadding="20dp"
+                app:chipEndPadding="20dp"
+                app:chipBackgroundColor="@color/chip_check"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:text="Test 2"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:id="@+id/chip03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipStartPadding="20dp"
+                app:chipEndPadding="20dp"
+                app:chipBackgroundColor="@color/chip_check"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:text="Test 3"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+</LinearLayout>
