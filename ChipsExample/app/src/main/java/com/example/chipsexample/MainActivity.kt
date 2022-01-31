@@ -2,6 +2,7 @@ package com.example.chipsexample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         chipGroup.setOnCheckedChangeListener { group, checkedId ->
+            Log.d("test", "Click: $checkedId")
             when(checkedId) {
                 R.id.chip01 -> {
                     Toast.makeText(applicationContext, "chip01", Toast.LENGTH_SHORT).show()

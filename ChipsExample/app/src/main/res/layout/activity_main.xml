@@ -34,6 +34,8 @@
                 android:layout_height="wrap_content"
                 app:chipStartPadding="20dp"
                 app:chipEndPadding="20dp"
+                app:chipStrokeColor="@color/chip_border_check"
+                app:chipStrokeWidth="2dp"
                 app:chipBackgroundColor="@color/chip_check"
                 android:textSize="18sp"
                 android:textColor="@color/white"
