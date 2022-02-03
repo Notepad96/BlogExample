@@ -8,6 +8,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
@@ -31,11 +32,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun checkPermission() {
+    private fun checkPermission() {
         var permission = mutableMapOf<String, String>()
         permission["camera"] = Manifest.permission.CAMERA
-        permission["storageRead"] = Manifest.permission.READ_EXTERNAL_STORAGE
-        permission["storageWrite"] =  Manifest.permission.WRITE_EXTERNAL_STORAGE
+//        permission["storageRead"] = Manifest.permission.READ_EXTERNAL_STORAGE
+//        permission["storageWrite"] =  Manifest.permission.WRITE_EXTERNAL_STORAGE
 
         var denied = permission.count { ContextCompat.checkSelfPermission(this, it.value)  == PackageManager.PERMISSION_DENIED }
 
@@ -55,7 +56,10 @@ class MainActivity : AppCompatActivity() {
         if(requestCode == REQUEST_IMAGE_CAPTURE) {
             var count = grantResults.count { it == PackageManager.PERMISSION_DENIED }
 
-            if(count != 0) finish()
+            if(count != 0) {
+                Toast.makeText(applicationContext, "권한을 동의해주세요.", Toast.LENGTH_SHORT).show()
+                finish()
+            }
         }
     }
 
