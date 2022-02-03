@@ -1,7 +1,7 @@
-# Topic : Button Click Event
+# Topic : Camera Open & Photo Load
 
 
-### https://notepad96.tistory.com/entry/Android-Kotlin-Click-Event
+### https://notepad96.tistory.com/entry/Android-Kotlin-Camera
 
 
 <br><br>
