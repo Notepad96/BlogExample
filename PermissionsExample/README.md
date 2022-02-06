@@ -1,7 +1,7 @@
-# Topic : Button Click Event
+# Topic : Permission Check And Permission Request
 
 
-### https://notepad96.tistory.com/entry/Android-Kotlin-Click-Event
+### https://notepad96.tistory.com/entry/Android-Kotlin-Permission-check
 
 
 <br><br>
