@@ -1,8 +1,8 @@
 package com.example.numberpickerdialog
 
 import android.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.dialog_num_select.view.*
 
@@ -35,4 +35,5 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
 }
