@@ -1,7 +1,7 @@
-# Topic : Button Click Event
+# Topic : Loading Animation - ContentLoadingProgressBar
 
 
-### https://notepad96.tistory.com/entry/Android-Kotlin-Click-Event
+### https://notepad96.tistory.com/entry/Android-Loading-Animation-ContentLoadingProgressBar
 
 
 <br><br>
