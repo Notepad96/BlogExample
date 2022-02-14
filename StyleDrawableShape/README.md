@@ -1,11 +1,14 @@
-# Topic : Button Click Event
+# Topic : Drawable Style - Border Width, Color / Corner Radius
 
 
-### https://notepad96.tistory.com/entry/Android-Kotlin-Click-Event
+### https://notepad96.tistory.com/entry/Android-Background-border-corner
 
 
 <br><br>
 
 # Preview
 
-![preview](preview.gif)
+![preview](preview.png)
+
+
+![preview](preview2.png)
