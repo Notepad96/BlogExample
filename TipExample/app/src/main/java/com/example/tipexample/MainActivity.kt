@@ -5,25 +5,27 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
+    var num = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView01 = TextView(this)
-        val width01 = resources.displayMetrics.widthPixels / 4
-        textView01.layoutParams = LinearLayout.LayoutParams(width01, LinearLayout.LayoutParams.WRAP_CONTENT)
-        textView01.text = "Text 1"
-        textView01.setBackgroundResource(R.color.purple_200)
+        main_calendar.setOnDateChangeListener { calendarView, y, m, d ->
+            val calendar = Calendar.getInstance()
+            calendar.set(y, m, d)
+            val str = convertString(calendar.time, "work", ++num)
 
-        val textView02 = TextView(this)
-        val width02 = resources.displayMetrics.widthPixels / 4 * 3
-        textView02.layoutParams = LinearLayout.LayoutParams(width02, LinearLayout.LayoutParams.WRAP_CONTENT)
-        textView02.text = "Text 2"
-        textView02.setBackgroundResource(R.color.teal_200)
+            main_date_text.text = str
+        }
+    }
 
-        linearLayout.addView(textView01)
-        linearLayout.addView(textView02)
+    private fun convertString(date: Date, title: String, num: Int): String {
+        val format = SimpleDateFormat("yyyyMMdd")
+        return "${format.format(date)}_${title}_${num}"
     }
 }
