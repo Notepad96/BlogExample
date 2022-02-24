@@ -1,7 +1,7 @@
-# Topic : Button Click Event
+# Topic : ImageView Full Screen
 
 
-### https://notepad96.tistory.com/entry/Android-Kotlin-Click-Event
+### https://notepad96.tistory.com/entry/Android-Kotlin-Image-Full-Screen
 
 
 <br><br>
