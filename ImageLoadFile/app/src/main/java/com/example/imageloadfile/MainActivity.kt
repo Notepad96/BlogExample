@@ -33,7 +33,9 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == REQUEST_IMAGE) {
             if(resultCode == RESULT_OK) {
-                img_load.load(data?.data)
+                img_load.load(data?.data) {
+                    crossfade(1500)
+                }
             }
         }
     }
