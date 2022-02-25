@@ -1,21 +1,41 @@
 package com.example.imageloadfile
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import coil.load
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private val REQUEST_PERMISSIONS = 1
+    private val REQUEST_IMAGE = 111
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         checkPermission()
 
 
+        btn_file_img.setOnClickListener {
+            val intent = Intent().apply {
+                type = "image/*"
+                action = Intent.ACTION_GET_CONTENT
+            }
+            startActivityForResult(intent, REQUEST_IMAGE)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == REQUEST_IMAGE) {
+            if(resultCode == RESULT_OK) {
+                img_load.load(data?.data)
+            }
+        }
     }
 
     private fun checkPermission() {
