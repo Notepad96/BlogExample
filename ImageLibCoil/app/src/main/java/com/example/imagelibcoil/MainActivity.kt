@@ -14,5 +14,13 @@ class MainActivity : AppCompatActivity() {
         img_test01.load(R.drawable.img01) {
             transformations(CircleCropTransformation())
         }
+
+        img_test02.load(R.drawable.img02) {
+            transformations(CircleCropTransformation())
+        }
+
+        img_test03.load(R.drawable.img03) {
+            transformations(CircleCropTransformation())
+        }
     }
 }
