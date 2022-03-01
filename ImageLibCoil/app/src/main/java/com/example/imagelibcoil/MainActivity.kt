@@ -19,8 +19,11 @@ class MainActivity : AppCompatActivity() {
             transformations(CircleCropTransformation())
         }
 
-        img_test03.load(R.drawable.img03) {
-            transformations(CircleCropTransformation())
+        btn_test.setOnClickListener {
+            img_test03.load(R.drawable.img03) {
+                transformations(CircleCropTransformation())
+                crossfade(2000)
+            }
         }
     }
 }

@@ -19,6 +19,14 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Image Load"
+        android:background="#FFFDC9"
+        />
+
     <ImageView
         android:id="@+id/img_test03"
         android:layout_width="match_parent"
