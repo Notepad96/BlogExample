@@ -10,7 +10,7 @@ import com.example.activityresultapi.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
 
-    private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) {
+    private val getContentImage = registerForActivityResult(ActivityResultContracts.GetContent()) {
         binding.mainImg.setImageURI(it)
     }
 
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.mainBtn.setOnClickListener {
-            getContent.launch("image/*")
+            getContentImage.launch("image/*")
         }
     }
 }
