@@ -1,7 +1,7 @@
 package com.example.activityresultapi
 
+import android.Manifest
 import android.content.Context
-import android.content.DialogInterface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -14,17 +14,30 @@ import com.example.activityresultapi.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
 
-    private val getContentImage = registerForActivityResult(ActivityResultContracts.GetContent()) {
-        binding.mainImg.setImageURI(it)
+    private val getContentImage = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+        uri.let { binding.mainImg.setImageURI(uri) }
     }
+    private val getTakePicture = registerForActivityResult(ActivityResultContracts.TakePicturePreview()) { bitmap ->
+        bitmap.let { binding.mainImg.setImageBitmap(bitmap) }
+    }
+    private val requestMultiplePermission = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { results ->
+        results.forEach {
+            if(!it.value) {
+                Toast.makeText(applicationContext, "권한 허용 필요", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+        }
+    }
+
+    private val permissionList = arrayOf(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        requestMultiplePermission.launch(permissionList)
 
         binding.mainBtn.setOnClickListener {
-
             openDialog(this)
         }
     }
@@ -36,11 +49,18 @@ class MainActivity : AppCompatActivity() {
         }
         val dialog = dialogBuild.create().apply { show() }
 
+        val cameraAddBtn = dialogLayout.findViewById<Button>(R.id.dialog_btn_camera)
         val fileAddBtn = dialogLayout.findViewById<Button>(R.id.dialog_btn_file)
+
+        cameraAddBtn.setOnClickListener {
+            getTakePicture.launch(null)
+            dialog.dismiss()
+        }
         fileAddBtn.setOnClickListener {
             getContentImage.launch("image/*")
             dialog.dismiss()
         }
     }
+
 }
 
