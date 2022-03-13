@@ -2,24 +2,35 @@ package com.example.activityresultapi
 
 import android.Manifest
 import android.content.Context
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
 import com.example.activityresultapi.databinding.ActivityMainBinding
+import java.io.File
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     private val getContentImage = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         uri.let { binding.mainImg.setImageURI(uri) }
     }
-    private val getTakePicture = registerForActivityResult(ActivityResultContracts.TakePicturePreview()) { bitmap ->
+    var pictureUri: Uri? = null
+    private val getTakePicture = registerForActivityResult(ActivityResultContracts.TakePicture()) {
+        if(it) {
+            pictureUri.let { binding.mainImg.setImageURI(pictureUri) }
+        }
+    }
+    private val getTakePicturePreview = registerForActivityResult(ActivityResultContracts.TakePicturePreview()) { bitmap ->
         bitmap.let { binding.mainImg.setImageBitmap(bitmap) }
     }
+
     private val requestMultiplePermission = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { results ->
         results.forEach {
             if(!it.value) {
@@ -28,7 +39,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     private val permissionList = arrayOf(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +47,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         requestMultiplePermission.launch(permissionList)
 
+        val file = File(filesDir, "picFromCamera")
+        pictureUri = FileProvider.getUriForFile(this, "${MediaStore.Images.Media.AUTHOR}", file)
         binding.mainBtn.setOnClickListener {
             openDialog(this)
         }
@@ -53,7 +65,8 @@ class MainActivity : AppCompatActivity() {
         val fileAddBtn = dialogLayout.findViewById<Button>(R.id.dialog_btn_file)
 
         cameraAddBtn.setOnClickListener {
-            getTakePicture.launch(null)
+            getTakePicture.launch(pictureUri)
+//            getTakePicturePreview.launch(null)
             dialog.dismiss()
         }
         fileAddBtn.setOnClickListener {
