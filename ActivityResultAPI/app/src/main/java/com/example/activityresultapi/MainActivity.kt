@@ -1,6 +1,7 @@
 package com.example.activityresultapi
 
 import android.Manifest
+import android.content.ContentValues
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
@@ -13,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import com.example.activityresultapi.databinding.ActivityMainBinding
 import java.io.File
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,20 +42,19 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    private val permissionList = arrayOf(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         requestMultiplePermission.launch(permissionList)
 
-        val file = File(filesDir, "picFromCamera")
-        pictureUri = FileProvider.getUriForFile(this, "${MediaStore.Images.Media.AUTHOR}", file)
+        pictureUri = createImageFile()
         binding.mainBtn.setOnClickListener {
             openDialog(this)
         }
     }
+
+    private val permissionList = arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE)
 
     private fun openDialog(context: Context) {
         val dialogLayout = layoutInflater.inflate(R.layout.dialog_select_image, null)
@@ -73,6 +75,15 @@ class MainActivity : AppCompatActivity() {
             getContentImage.launch("image/*")
             dialog.dismiss()
         }
+    }
+
+    private fun createImageFile(): Uri? {
+        val now = SimpleDateFormat("yyMMdd_HHmmss").format(Date())
+        val content = ContentValues().apply {
+            put(MediaStore.Images.Media.DISPLAY_NAME, "$now.jpg")
+            put(MediaStore.Images.Media.MIME_TYPE, "image/jpg")
+        }
+        return contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, content)
     }
 
 }
