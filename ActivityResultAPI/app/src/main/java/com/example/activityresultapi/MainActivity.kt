@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
     private fun createImageFile(): Uri? {
         val now = SimpleDateFormat("yyMMdd_HHmmss").format(Date())
         val content = ContentValues().apply {
-            put(MediaStore.Images.Media.DISPLAY_NAME, "$now.jpg")
+            put(MediaStore.Images.Media.DISPLAY_NAME, "img_$now.jpg")
             put(MediaStore.Images.Media.MIME_TYPE, "image/jpg")
         }
         return contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, content)
