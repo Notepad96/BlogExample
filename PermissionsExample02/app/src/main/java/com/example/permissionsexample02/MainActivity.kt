@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     private val requestMultiplePermission = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { results ->
         results.forEach {
             if(!it.value) {
-                Toast.makeText(applicationContext, "권한 허용 필요", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "${it.key} 권한 허용 필요", Toast.LENGTH_SHORT).show()
                 finish()
             }
         }
@@ -23,5 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        requestMultiplePermission.launch(permissionList)
     }
 }
