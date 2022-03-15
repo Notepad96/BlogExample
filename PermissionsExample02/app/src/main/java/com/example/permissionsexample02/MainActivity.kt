@@ -7,6 +7,8 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
+
+    // 권한 요청
     private val requestMultiplePermission = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { results ->
         results.forEach {
             if(!it.value) {
@@ -15,6 +17,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    // 추가할 권한들, 매니페스트 파일서도 추가 필요
     private val permissionList = arrayOf(
         Manifest.permission.CAMERA,
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
