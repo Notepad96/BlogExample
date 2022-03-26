@@ -11,9 +11,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.FileProvider
 import com.example.activityresultapi.databinding.ActivityMainBinding
-import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -48,13 +46,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         requestMultiplePermission.launch(permissionList)
 
-        pictureUri = createImageFile()
         binding.mainBtn.setOnClickListener {
             openDialog(this)
         }
     }
-
-    private val permissionList = arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE)
+    private val permissionList = arrayOf(
+        Manifest.permission.CAMERA,
+        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        Manifest.permission.READ_EXTERNAL_STORAGE)
 
     private fun openDialog(context: Context) {
         val dialogLayout = layoutInflater.inflate(R.layout.dialog_select_image, null)
@@ -67,8 +66,9 @@ class MainActivity : AppCompatActivity() {
         val fileAddBtn = dialogLayout.findViewById<Button>(R.id.dialog_btn_file)
 
         cameraAddBtn.setOnClickListener {
-            getTakePicture.launch(pictureUri)
-//            getTakePicturePreview.launch(null)
+            pictureUri = createImageFile()
+            getTakePicture.launch(pictureUri)   // Require Uri
+//            getTakePicturePreview.launch(null)    // Bitmap get
             dialog.dismiss()
         }
         fileAddBtn.setOnClickListener {
