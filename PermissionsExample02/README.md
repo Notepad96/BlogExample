@@ -1,4 +1,4 @@
-# Topic : registerForActivityResult
+# Topic : Permission Request - registerForActivityResult
 
 
 ### https://notepad96.tistory.com/176
