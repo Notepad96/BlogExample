@@ -14,6 +14,7 @@
         android:background="#3BEF92"
         android:textAllCaps="false"
         android:textSize="22sp"
+        android:textColor="@color/black"
         android:text="Image File Load"/>
 
     <ImageView

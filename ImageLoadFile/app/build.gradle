@@ -7,6 +7,8 @@ plugins {
 android {
     compileSdk 31
 
+    buildFeatures.viewBinding true
+
     defaultConfig {
         applicationId "com.example.imageloadfile"
         minSdk 21
