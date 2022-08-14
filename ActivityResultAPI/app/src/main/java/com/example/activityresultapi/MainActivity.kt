@@ -67,8 +67,8 @@ class MainActivity : AppCompatActivity() {
 
         cameraAddBtn.setOnClickListener {
             pictureUri = createImageFile()
-            getTakePicture.launch(pictureUri)   // Require Uri
-//            getTakePicturePreview.launch(null)    // Bitmap get
+//            getTakePicture.launch(pictureUri)   // Require Uri
+            getTakePicturePreview.launch(null)    // Bitmap get
             dialog.dismiss()
         }
         fileAddBtn.setOnClickListener {
