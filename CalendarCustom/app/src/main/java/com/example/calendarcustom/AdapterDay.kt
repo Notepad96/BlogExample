@@ -1,7 +1,6 @@
 package com.example.calendarcustom
 
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,7 +31,7 @@ class AdapterDay(val tempMonth:Int, val dayList: MutableList<Date>): RecyclerVie
             else -> Color.BLACK
         })
 
-        if(tempMonth != dayList[position].month - 1) {
+        if(tempMonth != dayList[position].month) {
             holder.layout.item_day_text.alpha = 0.4f
         }
     }

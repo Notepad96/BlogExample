@@ -3,23 +3,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:gravity="center"
     android:id="@+id/linearLayout">
 
-    <CalendarView
-        android:id="@+id/main_calendar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+    <!-- Num 1 -->
     <TextView
-        android:id="@+id/main_date_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:text=""
-        />
+        android:padding="10dp"
+        android:text="Text 01"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_marginBottom="20dp" />
 
+    <!-- Num 2 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Text 02"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="80dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/black"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Num 3 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Text 03"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/line_dotted"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Num 4 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text 04"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginVertical="50dp"
+            android:background="@drawable/line_dotted_vertical"
+            android:layerType="software"
+             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text 04"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </LinearLayout>

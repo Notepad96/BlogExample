@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/tlsgh/BlogExample/TipExample/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/tlsgh/BlogExample/TipExample/app/src/main/res/drawable/dotted.xml" value="0.2515" />
+        <entry key="..\:/Users/tlsgh/BlogExample/TipExample/app/src/main/res/drawable/line_dotted.xml" value="0.2515" />
+        <entry key="..\:/Users/tlsgh/BlogExample/TipExample/app/src/main/res/drawable/line_dotted_vertical.xml" value="0.2515" />
+        <entry key="..\:/Users/tlsgh/BlogExample/TipExample/app/src/main/res/drawable/line_vertical.xml" value="0.2515" />
+        <entry key="..\:/Users/tlsgh/BlogExample/TipExample/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
   </component>

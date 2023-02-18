@@ -1,14 +1,10 @@
 package com.example.imagelibcoil
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Parcel
+import androidx.appcompat.app.AppCompatActivity
 import coil.load
-import coil.size.*
-import coil.transform.BlurTransformation
 import coil.transform.CircleCropTransformation
 import coil.transform.GrayscaleTransformation
-import coil.transform.RoundedCornersTransformation
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
